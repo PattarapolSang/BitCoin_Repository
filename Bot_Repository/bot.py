@@ -10,23 +10,20 @@ from binance.enums import *
 RSI_PEROID = 14             # RSI 14
 RSI_OVERBOUGHT = 70
 RSI_OVERSOLD = 30
-TRADE_SYMBOL = "BNBTHB"
+TRADE_SYMBOL = "BNBBUSD"
 TRADE_QUANTITY = 0.05
 
-SOCKET = "wss://stream.binance.com:9443/ws/bnbbtc@kline_1m"
+SOCKET = "wss://stream.binance.com:9443/ws/bnbbusd@kline_1m"
 
 closes = []
 in_position = False
 
-client = Client(config.API_KEY, config.API_SECRET, tld='us')
+client = Client(config.API_KEY, config.API_SECRET)
 
 def order(side, quantity,symbol, order_type=ORDER_TYPE_MARKET):
     try:
         print("Sending order")
-        order = client.create_order(symbol=symbol,
-                                side=side,
-                                type=order_type,
-                                quantity=quantity)
+        order = client.create_order(symbol=symbol, side=side, type=order_type, quantity=quantity)
         print(order)
     except Exception as e:
         return False
