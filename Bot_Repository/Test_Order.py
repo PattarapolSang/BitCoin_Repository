@@ -24,8 +24,8 @@ def order(side, quantity,symbol, order_type=ORDER_TYPE_MARKET):
     try:
         print("Sending order")
         #order = client.create_order(symbol=symbols, side=sides, type=order_type, quantity=quantitys)
-        orderss = client.create_order(symbol=symbol, side=side, type=order_type, quantity=quantity)
-        print(orderss)
+        #orderss = client.create_order(symbol=symbol, side=side, type=order_type, quantity=quantity)
+        #print(orderss)
         print('Order complete')
     except Exception as e:
         print('Something wrong')
@@ -38,7 +38,7 @@ balance_BUSD = client.get_asset_balance(asset='BUSD')
 print(balance_BUSD)
 
 #order_succeeded_buy = order(SIDE_BUY, TRADE_QUANTITY, TRADE_SYMBOL)
-order_succeeded_sell = order(SIDE_SELL, TRADE_QUANTITY, TRADE_SYMBOL)
+#order_succeeded_sell = order(SIDE_SELL, TRADE_QUANTITY, TRADE_SYMBOL)
 #order_buy = client.order_market_buy(symbol=TRADE_SYMBOL, quantity=TRADE_QUANTITY)
 #order_sell  = client.order_market_sell(symbol=TRADE_SYMBOL, quantity=TRADE_QUANTITY)
 
@@ -58,3 +58,21 @@ print(status_API)
 
 print(orders)
 
+last_rsi = 20
+in_position = False
+print(in_position)
+
+if (last_rsi < RSI_OVERSOLD):
+    # check that if we already BUY?
+    print('Oversolddddd')
+
+    if (in_position):
+        print('It is oversold, but already own it, nothing to do')
+    else:
+        print('Oversold, BUY BUY BUY!!!!!')
+        # Binance order logic
+        order_succeeded = order(SIDE_BUY, TRADE_QUANTITY, TRADE_SYMBOL)
+        if order_succeeded:
+            in_position = True
+
+print(in_position)
