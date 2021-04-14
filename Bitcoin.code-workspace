@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.pythonPath": "C:\\Users\\Pattarapol Sangaroon\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+	}
 }
