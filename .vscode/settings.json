@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Pattarapol Sangaroon\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+    "python.pythonPath": "C:\\Users\\Pattarapol Sangaroon\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "python.autoComplete.extraPaths": ["C:\\Users\\Pattarapol Sangaroon\\Documents\\My_Local\\Personal_Document\\AfterGrad\\Bitcoin\\BitCoin_Repository\\Bot_Repository"],
+    "python.analysis.extraPaths": ["C:\\Users\\Pattarapol Sangaroon\\Documents\\My_Local\\Personal_Document\\AfterGrad\\Bitcoin\\BitCoin_Repository\\Bot_Repository"]
 }
