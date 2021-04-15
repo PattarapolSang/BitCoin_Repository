@@ -25,8 +25,8 @@ def order(side, quantity,symbol, order_type=ORDER_TYPE_MARKET):
     try:
         print("Sending order")
         #order = client.create_order(symbol=symbols, side=sides, type=order_type, quantity=quantitys)
-        orders = client.create_order(symbol=symbol, side=side, type=order_type, quantity=quantity)
-        print(orders)
+        #orders = client.create_order(symbol=symbol, side=side, type=order_type, quantity=quantity)
+        #print(orders)
         print('Order complete')
     except Exception as e:
         print('Something wrong')
